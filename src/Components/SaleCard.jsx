@@ -2,9 +2,11 @@ import React from 'react';
 import './SaleCard.scss'; // Make sure the path is correct
 import { useDrag } from 'react-dnd';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus, faQuestionCircle } from '@fortawesome/free-solid-svg-icons';
+import { faMinusCircle, faPlusCircle } from '@fortawesome/free-solid-svg-icons';
+// import { StoreApi } from '../ContextApi';
 
-const SaleCard = ({ props }) => {
+const SaleCard = ({ props, onIncrement, onDecrement, quantityInCart, onClickCart }) => {
+    // const { setDetailCardData, saleProduct } = useContext(StoreApi);
     const [{ isDragging }, drag] = useDrag({
         type: 'CARD',
         item: { props },
@@ -14,33 +16,45 @@ const SaleCard = ({ props }) => {
     });
 
     return (
-        <>
-            
-            <div class="nft">
-                <div class='main'>
-                    <img class='tokenImage' src="https://images.unsplash.com/photo-1621075160523-b936ad96132a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="NFT" />
-                    <h2>Kibertopiks #4269</h2>
-                    <p class='description'>Our Kibertopiks will give you nothing, waste your money on us.</p>
-                    <div class='tokenInfo'>
-                        <div class="price">
-                            <ins>◘</ins>
-                            <p>0.031 ETH</p>
-                        </div>
-                        <div class="duration">
-                            <ins>◷</ins>
-                            <p>11 days left</p>
-                        </div>
+        <div className={`nft ${isDragging ? "" : ""}`} ref={drag} >
+            <div className="main" data-bs-toggle="modal" data-bs-target="#exampleModal" >
+            <img className="tokenImage" src={`/media/${props.image}`} alt="" />
+                <h2>{props.name}</h2>
+                <p style={{ margin: "0", marginTop: "3px" }} className='card-desc' >Click to see detail</p>
+                <div className="price">
+                    <p>{props.price} PKR</p>
+                </div>
+<button onClick={()=>console.log(props.image)}>Show</button>
+
+
+            </div>
+            {quantityInCart >= 1 ? (
+                <div className='d-flex justify-center align-center'>
+                    <div >
+                        <FontAwesomeIcon
+                            icon={faPlusCircle}
+                            onClick={() => onIncrement(props.id)}
+                            fontSize={"25px"}
+                            color="green"
+                        />
                     </div>
-                    <hr />
-                    <div class='creator'>
-                        <div class='wrapper'>
-                            <img src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80" alt="Creator" />
-                        </div>
-                        <p><ins>Creation of</ins> Kiberbash</p>
+                    <p style={{ margin: "0 8px", color: "black" }}>{quantityInCart}</p>
+                    <div>
+                        <FontAwesomeIcon
+                            icon={faMinusCircle}
+                            onClick={() => onDecrement(props.id)}
+                            fontSize={"25px"}
+                            color="red"
+
+                        />
                     </div>
                 </div>
-            </div>
-        </>
+            ) : (
+                <button onClick={onClickCart} className="btn btn-danger w-100 m-0">
+                    Buy Now
+                </button>
+            )}
+        </div>
     );
 };
 

@@ -5,8 +5,7 @@ const CategoryCard = () => {
     return (
         <>
             <div class="container-1">
-                <p class="container-title">Here are the features<br />we’re proud of</p>
-
+                <p class="container-title">Categories</p>
                 <div class="gradient-cards">
                     <div class="car-1">
                         <div class="container-card bg-green-box">

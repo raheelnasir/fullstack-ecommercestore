@@ -25,30 +25,30 @@ const RotatingCardsRTC = () => {
         },
         {
             content: 'Special is the key',
-            backgroundImage: 'https://flamelab.io/img/avatar-sm.png',
+            backgroundImage: 'https://cdn.leonardo.ai/users/9c5c81ee-0af6-45d2-a406-940450d62697/generations/fa323540-75a5-4e72-b957-2ec6a1e5bdf1/DreamShaper_v7_watch_modern_wallpaper_product_full_screened_wr_0.jpg?w=512',
         },
         {
             content: 'This is something',
-            backgroundImage: 'https://flamelab.io/img/avatar-sm.png',
+            backgroundImage: 'https://cdn.leonardo.ai/users/9c5c81ee-0af6-45d2-a406-940450d62697/generations/fa323540-75a5-4e72-b957-2ec6a1e5bdf1/DreamShaper_v7_watch_modern_wallpaper_product_full_screened_wr_0.jpg?w=512',
         },
         {
             content: 'Very special',
-            backgroundImage: 'https://flamelab.io/img/avatar-sm.png',
+            backgroundImage: 'https://cdn.leonardo.ai/users/9c5c81ee-0af6-45d2-a406-940450d62697/generations/fa323540-75a5-4e72-b957-2ec6a1e5bdf1/DreamShaper_v7_watch_modern_wallpaper_product_full_screened_wr_0.jpg?w=512',
         },
         {
             content: 'Special is the key',
-            backgroundImage: 'https://flamelab.io/img/avatar-sm.png',
+            backgroundImage: 'https://cdn.leonardo.ai/users/9c5c81ee-0af6-45d2-a406-940450d62697/generations/fa323540-75a5-4e72-b957-2ec6a1e5bdf1/DreamShaper_v7_watch_modern_wallpaper_product_full_screened_wr_0.jpg?w=512',
         }, {
             content: 'This is something',
-            backgroundImage: 'https://flamelab.io/img/avatar-sm.png',
+            backgroundImage: 'https://cdn.leonardo.ai/users/9c5c81ee-0af6-45d2-a406-940450d62697/generations/fa323540-75a5-4e72-b957-2ec6a1e5bdf1/DreamShaper_v7_watch_modern_wallpaper_product_full_screened_wr_0.jpg?w=512',
         },
         {
             content: 'Very special',
-            backgroundImage: 'https://flamelab.io/img/avatar-sm.png',
+            backgroundImage: 'https://cdn.leonardo.ai/users/9c5c81ee-0af6-45d2-a406-940450d62697/generations/fa323540-75a5-4e72-b957-2ec6a1e5bdf1/DreamShaper_v7_watch_modern_wallpaper_product_full_screened_wr_0.jpg?w=512',
         },
         {
             content: 'Special is the key',
-            backgroundImage: 'https://flamelab.io/img/avatar-sm.png',
+            backgroundImage: 'https://cdn.leonardo.ai/users/9c5c81ee-0af6-45d2-a406-940450d62697/generations/fa323540-75a5-4e72-b957-2ec6a1e5bdf1/DreamShaper_v7_watch_modern_wallpaper_product_full_screened_wr_0.jpg?w=512',
         },
 
         // Add more items here...
@@ -75,7 +75,7 @@ const RotatingCardsRTC = () => {
                 {items.map((item, index) => (
                     <RotatingCardRTC
                         key={index}
-                        content={item.content}
+
                         backgroundImage={item.backgroundImage}
                     />
                 ))}

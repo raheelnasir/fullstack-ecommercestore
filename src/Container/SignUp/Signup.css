@@ -1,0 +1,158 @@
+:root {
+    --bg-dark: #1e3238;
+    --bg-brown: #f7b58c;
+    --bg-orange: #f1533b;
+    --red: #ff4646;
+    --bg-black: #192f34;
+    --bg-dark-blue: #05355e;
+}
+
+.signup-main {
+    display: flex;
+    height: max-content;
+    min-height: 100vh;
+    height: max-content;
+}
+
+.sign-section-1 {
+    margin: 20px auto;
+    box-shadow: 2px 2px 2px 2px black;
+    width: 80%;
+    height: 95%;
+    display: flex;
+    flex-direction: row;
+}
+
+#log-side {
+    width: 40%;
+    border-right: 1px solid black;
+    min-height: 100%!important;
+}
+
+
+
+.sign-main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    padding-bottom: 20px;
+
+}
+
+#log-up {
+    display: flex;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.sign-up-form {
+    display: flex;
+    flex-direction: row;
+    margin: 10px auto;
+    flex-wrap: wrap;
+    width: 90%;
+}
+
+.sign-up-form input {
+    margin: 5px auto;
+    padding: 8px;
+    font-size: 16px;
+    width: 45%;
+    box-shadow: 1px 1px 1px 1px gray;
+
+    color: var(--bg-dark);
+}
+
+.sign-up-form input::placeholder {
+    padding: 2px;
+    font-size: 16px;
+}
+
+.sign-up-form input:active,
+.sign-up-form input:focus {
+    outline: none;
+}
+
+.sign-shifter {
+    color: var(--bg-black);
+    transition: all 0.5s ease-in-out;
+    margin: 2px auto;
+}
+
+.sign-shifter:hover {
+    color: var(--red);
+}
+
+.sign-verifier {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin: 4px 0;
+
+}
+
+.sign-verifier div {
+    overflow: hidden;
+    width: max-content;
+    box-shadow: 1px 1px 1px 1px black;
+}
+
+.sign-verifier div input {
+    margin: auto 0;
+    border: none;
+    box-shadow: none;
+    padding: 4px !important;
+    width: 120px;
+    outline: none;
+}
+
+.sign-verifier div button {
+    border-radius: 0 !important;
+    border: none !important;
+}
+
+.sign-up-button {
+    background-color: #192f34;
+    color: white;
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    box-shadow: 1px 1px 1px 1px var(--bg-dark-blue);
+    margin: 2px auto;
+    transition: all 0.5s ease-in-out;
+}
+
+.sign-up-button:hover {
+    box-shadow: 3px 3px 3px 3px var(--bg-dark);
+}
+
+
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form input {
+    margin: 4px auto;
+    border: 2px solid gainsboro;
+    font-size: 19px;
+    padding: 8px;
+    outline: none;
+}
+
+.login-form input::placeholder {
+    font-size: 19px;
+    padding: 2px;
+}
+
+.login-up-button {
+    background-color: var(--bg-orange);
+    color: white;
+    padding: 10px 50px;
+    box-shadow: 1px 1px 1px 1px var(--bg-dark-blue);
+    margin: 4px auto;
+}

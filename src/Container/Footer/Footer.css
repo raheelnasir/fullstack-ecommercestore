@@ -5,12 +5,12 @@
     --bg-orange: #f1533b;
     --red: #ff4646;
     --bg-black: #192f34;
-    --bg-dark-blue:#05355e;
+    --bg-dark-blue: #05355e;
 }
 
 footer {
     position: relative;
-    background:  var(--bg-dark-blue);
+    background: var(--bg-dark-blue);
     width: 100%;
     bottom: 0;
     left: 0;
@@ -171,7 +171,7 @@ footer .content .link-boxes .box {
 }
 
 .link-boxes .input-box input::placeholder {
-    color: #1e3741  ;
+    color: #1e3741;
     font-size: 16px;
 }
 
@@ -283,5 +283,11 @@ footer .bottom-details .bottom_text {
 
     footer .content .link-boxes .input-box {
         width: 100%;
+    }
+}
+
+@media screen and (max-width:550px) {
+    footer {
+        margin-bottom: 50px;
     }
 }

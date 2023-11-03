@@ -1,0 +1,98 @@
+:root {
+    --bg-dark: #1e3238;
+    --bg-brown: #f7b58c;
+    --bg-orange: #f1533b;
+    --red: #ff4646;
+    --bg-black: #192f34;
+    --bg-dark-blue: #05355e;
+}
+
+.detail-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.detail-title {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.detail-likes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+    font-size: 20px;
+}
+
+#like-icon {
+    margin: auto;
+}
+
+.liked {
+    color: red !important;
+}
+
+.detail-reviews {
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-bar {
+    display: grid;
+    grid-template-areas: 'img user user'
+        'img comment comment';
+    border: 1px solid gray;
+    padding: 10px !important;
+    width: fit-content;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+#comment-image {
+    grid-area: img;
+    width: 60px;
+    height: 50px;
+}
+
+.comment-user {
+    grid-area: user;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.comment-comment {
+    grid-area: comment;
+}
+
+.review-comment {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    padding: 8px;
+    width: fit-content;
+    margin: 5px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 1px 1px 1px 1px black;
+}
+
+#send-button {
+    margin: auto;
+    font-size: 20px;
+    color: var(--red);
+    padding-left: 3px;
+    border-left: 0.5px solid black;
+}
+
+.review-comment input {
+    outline: none;
+    background: transparent;
+    padding: 2px;
+    color: var(--bg-orange);
+    margin: auto;
+}
+#review-edit{
+    margin-left: 3px;
+}

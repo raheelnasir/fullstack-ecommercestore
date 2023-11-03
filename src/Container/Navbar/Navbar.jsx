@@ -14,7 +14,7 @@ const Navbar = () => {
                             <Link to={"/sale"}>Sale</Link>
                         </li>
                         <li>
-                            <Link to={"/"}>Rewards</Link>
+                            <Link to={"/manageproducts"}>Manage Products</Link>
                         </li>
 
                     </ul>
@@ -22,13 +22,13 @@ const Navbar = () => {
                 <div className='navbar-second'>
                     <ul>
                         <li>
-                            <Link to={"/"}>Help</Link>
+                            <Link to={"/postproduct"}>Post Prodcts</Link>
                         </li>
                         <li>
                             <Link to={"/"}>Contact</Link>
                         </li>
                         <li>
-                            <Link to={"/"}>Home</Link>
+                            <Link to={"/sign"}>Sign</Link>
                         </li>
                     </ul>
                 </div>

@@ -4,6 +4,7 @@
     margin: 0px auto 0 auto;
     height: auto !important;
     perspective: 2500px;
+    
 }
 
 .rotating-cards-carousel-rtc {
@@ -14,14 +15,16 @@
     transform-style: preserve-3d;
     animation: rotate360 15s infinite forwards linear;
 }
-.rotating-cards-carousel-rtc:hover{
+
+.rotating-cards-carousel-rtc:hover {
     animation-play-state: paused;
 
 }
+
 .rotating-cards-face-rtc {
     position: absolute;
-    width: 300px;
-    height: 187px;
+    width: 150px;
+    height: 350px;
     top: 20px;
     left: 10px;
     right: 10px;

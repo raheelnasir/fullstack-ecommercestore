@@ -8,7 +8,10 @@
 }
 
 .sale-main {
+    position: relative;
     display: grid;
+    margin-top: 5px;
+    background: whitesmoke;
 
     grid-template-areas: 'sec1 sec2 sec2 sec3';
 }
@@ -19,13 +22,14 @@
     grid-area: sec1;
     background: transparent;
     width: max-content;
-    /* border-top-left-radius: 20px;
-    border-top-right-radius: 20px; */
+    max-width: 190px;
+    border-top: none;
     overflow: hidden;
     border: 1px solid gainsboro;
     height: max-content;
     position: sticky;
-    top: 0;
+    top: 80px;
+    /* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; */
 }
 
 .sale-left-1 {
@@ -69,58 +73,11 @@
 }
 
 
-.sale-search-bar {
-    display: flex;
-    flex-direction: row;
-    background: #f7810a;
-    width: max-content;
-    margin: 4px auto;
-    box-shadow: 1px 1px 1px 1px black;
 
-    overflow: hidden;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    backdrop-filter: 10px;
-}
-
-
-.sale-search-bar input {
-    outline: none;
-    border: none;
-    background-color: white;
-    font-size: 20px;
-    color: black;
-    width: 250px;
-    padding-left: 5px;
-}
-
-.sale-search-bar input::placeholder {
-    font-size: 17px;
-    padding-left: 5px;
-}
-
-#search-icon {
-    margin: auto;
-    padding: 10px;
-    font-size: 20px;
-    color: black;
-}
-
-#search-category {
-    outline: none;
-    padding-left: 8px;
-    border: none;
-    background: transparent;
-    font-weight: 600;
-
-    color: black;
-    border-right: 1px solid gray;
-}
 
 
 .sale-section-2 {
     position: relative;
-    display: grid;
     background: transparent;
     grid-area: sec2;
     overflow: hidden;
@@ -134,7 +91,7 @@
 }
 
 .sale-cards-holder {
-    padding: 10px 5px;
+    padding: 0 5px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -143,9 +100,9 @@
 }
 
 #sale-affilate {
-box-shadow: inset;
-box-shadow: 1px 1px 1px 1px black;
-padding: 10px;
+    box-shadow: inset;
+    box-shadow: 1px 1px 1px 1px black;
+    padding: 10px;
 }
 
 #sale-head-2 {
@@ -155,27 +112,130 @@ padding: 10px;
     display: flex;
 }
 
+.cart-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.cart-button div {
+    margin: auto 5px;
+    font-size: 25px;
+    font-weight: 900;
+}
+
 .sale-section-3 {
-    position: sticky;
-    top: 0px;
+    z-index: 0;
+    position: sticky !important;
+    top: 90px;
+    right: 0;
     display: grid;
-    float: right !important;
+    height: max-content;
+    min-height: 300px;
     grid-area: sec3;
-    height: 100vh;
     background-color: white;
-    /* border-top-left-radius: 20px;
-    border-top-right-radius: 20px; */
     overflow: hidden;
-    box-shadow: 1px 1px 1px 2px gray;
+    /* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; */
+}
+
+#item-pic {
+    padding: 5px;
+}
+
+#item-pic img {
+    height: 100%;
+}
+
+.cart-items {
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+#plus:hover {
+    color: rgb(89, 89, 209);
+    font-size: 26px;
+}
+
+#minus:hover {
+    color: var(--bg-orange);
+    font-size: 26px;
+
 }
 
 .sale-section-3 p {
     font-size: 20px;
-
     font-weight: 500;
-    margin: 0 auto;
+    margin: 0;
+
     text-align: center;
     width: 100%;
-    background-color: beige;
+    background-color: rgba(241, 196, 110, 0.9);
     height: max-content;
+}
+
+.sale-cart-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#offcanvasRight{
+    width: 100vw!important;
+}
+
+@media screen and (max-width: 1200px) {
+    .sale-section-3 {
+        min-width: 0;
+        max-width: unset !important;
+
+    }
+
+   
+    .sale-section-1 {
+        max-width: 190px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .sale-section-3 {
+        display: block;
+    }
+
+    .sale-section-1 {
+        width: 60px;
+    }
+
+}
+
+@media screen and (max-width: 825px) {
+    .sale-section-1 {
+        display: block;
+    }
+
+    .sale-section-1 {
+        width: 60px;
+    }
+
+}
+
+
+@media screen and (max-width: 768px) {
+    .sale-section-1 {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 645px) {
+    .sale-section-3 {
+        max-width: 140px !important;
+    }
+
+    .cart-price {
+        font-size: 16px !important;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .sale-section-3 {
+        display: none !important;
+    }
 }

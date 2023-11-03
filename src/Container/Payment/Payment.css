@@ -1,0 +1,107 @@
+:root {
+    --bg-dark: #1e3238;
+    --bg-brown: #f7b58c;
+    --bg-orange: #f1533b;
+    --red: #ff4646;
+    --bg-black: #192f34;
+    --bg-dark-blue: #05355e;
+}
+
+.payment-main {
+    display: flex;
+    margin: 20px;
+    padding: 5px;
+    flex-direction: row;
+    justify-content: center;
+    height: max-content;
+    overflow: hidden;
+}
+
+.payment-main img {
+    margin: auto;
+    width: 45%;
+}
+
+.payment-detail {
+
+    display: flex;
+    margin: auto;
+    padding: 10px;
+    flex-direction: column;
+    width: 30%;
+    box-shadow: 3px 3px 3px 3px black;
+}
+
+.payment-detail input {
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+    color: var(--bg-dark);
+    font-weight: 700;
+    background: transparent;
+    border: 2px solid gainsboro;
+}
+
+.payment-detail p {
+    margin-left: 10%;
+    margin-top: 8px;
+    margin-bottom: 0;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: left;
+    color: #ff4646;
+}
+
+#order-button {
+    background-color: var(--red);
+    width: 50%;
+    margin: 5px auto;
+    padding: 4px;
+    font-size: 22px;
+    font-weight: 700;
+    color: aliceblue;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 3px 3px 3px 3px gray;
+}
+
+#order-button:hover {
+    box-shadow: 3px 3px 3px 3px var(--bg-dark-blue);
+}
+
+@media screen and (max-width:970px) {
+    .payment-main {
+        display: flex;
+        padding: 10px;
+        flex-direction: column !important;
+
+    }
+
+    .payment-main img {
+        margin: auto;
+        width: 50%;
+    }
+
+    .payment-detail {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    #animation {
+        display: none;
+    }
+}
+
+#animation {
+    overflow: hidden;
+    width: 45%;
+    height: 80vh;
+    margin: auto;
+    position: relative;
+
+}
+
+#animation img {
+    width: 80vw;
+    position: absolute;
+    top: -10%;
+}

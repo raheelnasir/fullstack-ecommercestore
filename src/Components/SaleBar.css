@@ -1,0 +1,80 @@
+:root {
+    --bg-dark: #1e3238;
+    --bg-brown: #f7b58c;
+    --bg-orange: #f1533b;
+    --red: #ff4646;
+    --bg-black: #192f34;
+    --bg-dark-blue: #05355e;
+}
+
+
+.sale-nav {
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    background: white;
+    display: flex;
+    z-index: 999;
+    flex-direction: row;
+    height: max-content;
+    padding: 10px;
+    justify-content: center;
+    box-shadow: 3px 3px 3px 3px rgb(0, 0, 0, 0.5);
+
+}
+
+.sale-nav h1 {
+    margin: auto 2px;
+    font-size: 30px;
+    font-weight: 900;
+    font-style: oblique;
+    color: var(--bg-orange);
+}
+
+#logo {
+    width: 70px;
+    margin: auto 8px;
+}
+
+
+.sale-search-bar {
+    overflow: hidden;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: var(--bg-orange);
+    border: 4px solid var(--bg-orange);
+
+    padding: 0px 5px;
+    margin: auto 0;
+}
+
+.sale-search-bar input {
+    width: 60vw;
+    margin: auto;
+    padding: 6px;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.sale-search-bar input:active,
+.sale-search-bar input:focus {
+    border: none;
+    outline: none;
+}
+
+#search-icon {
+    font-size: 20px;
+    margin: auto;
+    color: white;
+    padding-left: 9px;
+    background-color: var(--bg-orange);
+}
+
+#cart-icon {
+    margin: auto 4px;
+    font-size: 25px;
+    color: var(--red);
+
+}
